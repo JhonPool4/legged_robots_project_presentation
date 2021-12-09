@@ -1,0 +1,39 @@
+% useful commands
+
+% argmax
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}   % Jan Hlavacek
+
+% ratio: new and old policies
+\newcommand{\ratio}{   \frac{\pi_{\theta}(a|s)}{\pi_{\theta, \mathrm{old}}(a|s) }   }
+
+% advantage term
+\newcommand{\advantage}{ \hat{A}_{t}  }
+% expectation
+\newcommand{\expectation}{  \hat{\mathbb{E}}_{t}}
+
+
+% block
+\newenvironment<>{varblock}[2][.9\textwidth]{%
+	\setlength{\textwidth}{#1}
+	\begin{actionenv}#3%
+		\def\insertblocktitle{#2}%
+		\par%
+		\usebeamertemplate{block begin}}
+	{\par%
+		\usebeamertemplate{block end}%
+\end{actionenv}}
+
+% Variable width example block
+\newenvironment<>{myexampleblock}[2][0.9\textwidth]{%
+	\setlength{\textwidth}{#1}%
+	\setlength{\linewidth}{\textwidth}%
+	\begin{actionenv}#3%
+		\def\insertblocktitle{#2}%
+		\par%
+		\setbeamercolor{local structure}{parent=example text}%
+		\usebeamertemplate{block example begin}}
+	{\par%
+		\usebeamertemplate{block example end}%
+\end{actionenv}}
+
+

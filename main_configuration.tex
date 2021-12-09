@@ -1,0 +1,76 @@
+% template configuration
+% size: 12.8cm x 9.6cm (a 4:3 aspect ratio)
+\documentclass[10pt]{beamer}
+%\hypersetup{pdfpagemode=FullScreen}
+\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+
+% color
+\usepackage{xcolor}
+\definecolor{forestgreen}{HTML}{1d771d}
+
+
+% add multimedia
+\usepackage{multimedia}
+
+% figure configuration
+\usepackage{caption}
+\captionsetup[figure]{font=scriptsize, justification=centering}
+
+% footnote configuration
+\setbeamerfont{footnote}{size=\tiny}
+
+% subfig
+\usepackage{subfig}
+\captionsetup[subfigure]{font=scriptsize, justification=centering}
+
+% break equation
+\usepackage{amsmath}
+
+% outile configuration
+\setbeamerfont{section in toc}{size=\large}
+\setbeamerfont{subsection in toc}{size=\small}
+\setbeamertemplate{section in toc}[sections numbered]
+%\setbeamertemplate{subsection in toc}[subsections numbered]
+
+
+
+
+
+
+
+
+
+
+
+% introduction parameters
+\title[Article presentation]{Bipedal robot walking using reinforcement learning}
+\subtitle{
+	%\textbf{Conference}: IEEE Transactions on Neural Systems and Rehabilitation Engineering, June 2010
+	%\\ 
+	\textbf{Authors}: J. Charaja and L. Borgonovi}
+\author[J. Charaja and L. Borgonovi]{Jhon Charaja\inst{1} and Luca Borgonovi\inst{1}}
+\institute[USP]{
+	\inst{1} Universidade de São Paulo, Brasil
+}
+\date{\today}
+
+
+% table of contents
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Outline}
+		%\setlength{\parskip}{2ex}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Table of contents}
+		%\setlength{\parskip}{2ex}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
