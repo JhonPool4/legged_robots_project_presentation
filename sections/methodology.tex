@@ -36,7 +36,7 @@
 	\begin{equation*}
 		V^{\pi}(s_t= s) = E_{\pi}  \left[r_t + \gamma r_{t+1} + \gamma^{2} r_{t+2}+ . . . | s_t = s \right],
 	\end{equation*}
-	\noindent where $\gamma$ is a discount factor and $s_t$ is initial {\color{gray} (current)} state.
+	\noindent where $\gamma$ is a discount factor and $s_t$ is initial state.
 	
 	\begin{figure}
 		\centering
@@ -73,14 +73,14 @@
 
 \begin{frame}
 	\frametitle{Policy gradient method}
-	This method is focused on modify the neural network parameters {\color{gray} ($\theta$)} to get a optimal {\color{gray} (local)} policy\footnotemark[1].
+	This method is focused on modify the neural network parameters  ($\theta$) to get a optimal {\color{gray} (local)} policy\footnotemark[1].
 
 	\begin{center}
 		\begin{minipage}{8cm}
 			\begin{myexampleblock}[8cm]{}
 				The objective function {\color{gray} (reward)} is formulated as\footnotemark[1]				
 				\begin{equation*}
-					J(\theta) = \expectation \left[ \mathrm{log} \pi_\theta (a|s) \advantage  \right],			
+					L(\theta) = \expectation \left[ \mathrm{log} \pi_\theta (a|s) \advantage  \right],			
 				\end{equation*}
 				with,
 				\begin{equation*}
@@ -90,7 +90,6 @@
 				\newline
 				\hspace{10px}\makebox[\linewidth][l]{				
 				\begin{tabular}{l l}
-					${\color{forestgreen} \bullet}$ $r_{t}(\theta)$ & probability ratio between policies \\
 					${\color{forestgreen} \bullet}$ $\advantage$ & advantage function \\
 					${\color{forestgreen} \bullet}$ $V^{\pi_{\theta}}_{t}$ & final reward following policy $(\pi_\theta)$ \\
 					${\color{forestgreen} \bullet}$ $\hat{V}_{t}$ & expected final reward {\color{gray}(baseline)}
@@ -114,7 +113,7 @@
 			\begin{myexampleblock}[9cm]{}
 				The main objective function {\color{gray} (reward)} is given by
 				\begin{equation*}
-					J^{\mathrm{CLIP}}(\theta) = \expectation \left[ \mathrm{min} \left(  r_{t}(\theta)  \advantage,  \mathrm{clip} (r_{t}(\theta) , 1-\epsilon, 1+\epsilon) \advantage  \right)  \right],			
+					L^{\mathrm{CLIP}}(\theta) = \expectation \left[ \mathrm{min} \left(  r_{t}(\theta)  \advantage,  \mathrm{clip} (r_{t}(\theta) , 1-\epsilon, 1+\epsilon) \advantage  \right)  \right],			
 				\end{equation*}	
 				with,
 				\begin{equation*}
