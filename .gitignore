@@ -1,5 +1,7 @@
 legged_robots.mp4
 embed_video.aux
+main.bbl
+main.blg
 main.aux
 main.log
 main.nav
@@ -16,3 +18,6 @@ sections/scopes.log
 sections/methodology.aux
 sections/results.aux
 sections/conclusions.aux
+sections/objective.aux
+sections/objective.log
+Pitch  15 min.gdoc
