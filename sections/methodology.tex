@@ -7,7 +7,14 @@
 	
 	% generate animation: transparence (0.5) for not necessary
 	\begin{figure}
-		\includegraphics{reinforcement_learning_diagram.pdf}
+		\begin{overprint}
+			\onslide<1>\includegraphics{reinforcement_learning_diagram.pdf}
+			\onslide<2>\includegraphics{reinforcement_learning_diagram_1.pdf}
+			\onslide<3>\includegraphics{reinforcement_learning_diagram_2.pdf}
+			\onslide<4>\includegraphics{reinforcement_learning_diagram_3.pdf}
+			\onslide<5>\includegraphics{reinforcement_learning_diagram_4.pdf}
+			\onslide<6>\includegraphics{reinforcement_learning_diagram.pdf}
+		\end{overprint}
 	\end{figure}
 
 	\footnotetext[1]{R. S. Sutton (2018).}
@@ -19,7 +26,11 @@
 	A policy ($\pi$) indicates the decision {\color{gray} (action)} that the agent should take as a function of the agent's state to accomplish the task\footnotemark[1].% ($\pi (a|s)$).
 	
 	\begin{figure}
-		\includegraphics{policy_stochastic.pdf}
+		\begin{overprint}
+			\onslide<1>\includegraphics{policy_stochastic_1.pdf}
+			\onslide<2>\includegraphics{policy_stochastic.pdf}
+		\end{overprint}
+		
 	\end{figure}
 	
 	\footnotetext[1]{R. S. Sutton (2018).}
@@ -39,8 +50,10 @@
 	\noindent where $\gamma$ is a discount factor and $s_t$ is initial state.
 	
 	\begin{figure}
-		\centering
-		\includegraphics{policy_selection_v2.pdf}
+		\begin{overprint}
+			\onslide<1>\includegraphics{policy_selection_v3_1.pdf}
+			\onslide<2>\includegraphics{policy_selection_v3.pdf}
+		\end{overprint}
 	\end{figure}
 
 	\footnotetext[1]{R. S. Sutton (2018).}
